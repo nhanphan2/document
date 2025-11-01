@@ -1,0 +1,1605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Auto Post Sheet To WordPress - Complete Documentation">
+    <title>Auto Post Sheet To WordPress - Documentation</title>
+    <link rel="stylesheet" href="css/docs-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="docs-header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-file-alt"></i>
+                <h1>Auto Post Sheet To WordPress</h1>
+            </div>
+            <div class="version">Version 2.0.0</div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="docs-container">
+        <!-- Sidebar Navigation -->
+        <aside class="docs-sidebar">
+            <div class="sidebar-header">
+                <i class="fas fa-bars"></i>
+                <span>Documentation</span>
+            </div>
+            
+            <nav class="docs-nav">
+                <ul>
+                    <li><a href="#introduction" class="active"><i class="fas fa-home"></i> Introduction</a></li>
+                    <li><a href="#features"><i class="fas fa-star"></i> Features</a></li>
+                    <li><a href="#requirements"><i class="fas fa-check-circle"></i> Requirements</a></li>
+                    <li><a href="#installation"><i class="fas fa-download"></i> Installation</a></li>
+                    <li><a href="#configuration"><i class="fas fa-cog"></i> Configuration</a>
+                        <ul class="sub-menu">
+                            <li><a href="#config-ai">AI Provider Setup</a></li>
+                            <li><a href="#config-sheets">Google Sheets Setup</a></li>
+                            <li><a href="#config-post">Post Settings</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#usage"><i class="fas fa-play-circle"></i> Usage Guide</a>
+                        <ul class="sub-menu">
+                            <li><a href="#usage-sheet">Prepare Google Sheet</a></li>
+                            <li><a href="#usage-test">Test Connection</a></li>
+                            <li><a href="#usage-generate">Generate Content</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#ai-providers"><i class="fas fa-brain"></i> AI Providers</a></li>
+                    <li><a href="#languages"><i class="fas fa-language"></i> Languages</a></li>
+                    <li><a href="#troubleshooting"><i class="fas fa-wrench"></i> Troubleshooting</a></li>
+                    <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    <li><a href="#support"><i class="fas fa-life-ring"></i> Support</a></li>
+                    <li><a href="#changelog"><i class="fas fa-history"></i> Changelog</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="docs-content">
+            <!-- Search Box -->
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search documentation...">
+                <i class="fas fa-search"></i>
+            </div>
+
+            <!-- Introduction Section -->
+            <section id="introduction" class="doc-section">
+                <h2><i class="fas fa-home"></i> Introduction</h2>
+                <div class="content-block">
+                    <p class="lead">Welcome to <strong>Auto Post Sheet To WordPress</strong> - the most advanced AI-powered content automation plugin for WordPress.</p>
+                    
+                    <div class="info-box info">
+                        <i class="fas fa-info-circle"></i>
+                        <div>
+                            <strong>What is this plugin?</strong>
+                            <p>This plugin automatically generates high-quality WordPress posts from Google Sheets using cutting-edge AI technology. Simply prepare your keywords in a Google Sheet, and let AI create professional content in 15+ languages.</p>
+                        </div>
+                    </div>
+
+                    <h3>Who is this for?</h3>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> <strong>Content Marketers</strong> - Generate unlimited articles at scale</li>
+                        <li><i class="fas fa-check"></i> <strong>Bloggers</strong> - Automate your content creation workflow</li>
+                        <li><i class="fas fa-check"></i> <strong>SEO Agencies</strong> - Create multilingual content for clients</li>
+                        <li><i class="fas fa-check"></i> <strong>Publishers</strong> - Maintain consistent posting schedules</li>
+                        <li><i class="fas fa-check"></i> <strong>Developers</strong> - Build custom content solutions</li>
+                    </ul>
+
+                    <div class="video-wrapper">
+    <iframe 
+        src="https://drive.google.com/file/d/1YyPjIUvLXzbfOma8xfCabggxuGEIthy6/preview" 
+        width="100%" 
+        height="480" 
+        frameborder="0" 
+        allow="autoplay; encrypted-media" 
+        allowfullscreen>
+    </iframe>
+</div>
+
+<div class="info-box info" style="margin-top: var(--spacing-lg);">
+    <i class="fas fa-book-open"></i>
+    <div>
+        <strong>Additional Resources</strong>
+        <p>For more detailed documentation, visit our 
+            <a href="https://docs.google.com/document/d/1anRHkhZobhX3vPoqFDnU3jTHJcmOvoIMyAaQe9-8iOc/edit?usp=sharing" target="_blank">
+                Google Docs guide <i class="fas fa-external-link-alt"></i>
+            </a>
+        </p>
+    </div>
+</div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section id="features" class="doc-section">
+                <h2><i class="fas fa-star"></i> Features</h2>
+                <div class="content-block">
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h3>5 AI Providers</h3>
+                            <p>Choose from OpenAI, Claude, Grok, DeepSeek, or Gemini. Each provider offers multiple models for different quality and cost needs.</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <h3>15+ Languages</h3>
+                            <p>Generate content in Vietnamese, English, Chinese, Spanish, French, German, and 10+ more languages with native-quality output.</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-table"></i>
+                            </div>
+                            <h3>Google Sheets Integration</h3>
+                            <p>Manage keywords, categories, and content directly in Google Sheets. Easy collaboration with your team.</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3>Real-time Progress</h3>
+                            <p>Beautiful animated progress sidebar shows live updates as content is being generated and published.</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-sliders-h"></i>
+                            </div>
+                            <h3>Content Control</h3>
+                            <p>Adjust content length (500-2000 words), set posting delays, choose post status (draft/publish), and more.</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Security Hardened</h3>
+                            <p>Built with WordPress Coding Standards. Protected against XSS, SQL injection, and CSRF attacks.</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-image"></i>
+                            </div>
+                            <h3>Auto Image Insert</h3>
+                            <p>Automatically insert featured images after the first H2 heading for better visual appeal.</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-history"></i>
+                            </div>
+                            <h3>Detailed History</h3>
+                            <p>Track all posting activities with timestamps, success/failure status, and error messages.</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <h3>SEO Optimized</h3>
+                            <p>AI-generated content includes proper H2/H3 structure, natural keyword placement, and engaging introductions.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box success">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Professional Quality</strong>
+                            <p>All AI-generated content is structured with proper HTML tags, includes engaging sapo (introduction), multiple H2 sections with H3 subsections, and natural language flow.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Requirements Section -->
+            <section id="requirements" class="doc-section">
+                <h2><i class="fas fa-check-circle"></i> System Requirements</h2>
+                <div class="content-block">
+                    <h3>Server Requirements</h3>
+                    <table class="specs-table">
+                        <thead>
+                            <tr>
+                                <th>Component</th>
+                                <th>Minimum</th>
+                                <th>Recommended</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>WordPress</strong></td>
+                                <td>5.0+</td>
+                                <td>6.4+</td>
+                            </tr>
+                            <tr>
+                                <td><strong>PHP</strong></td>
+                                <td>7.4+</td>
+                                <td>8.1+</td>
+                            </tr>
+                            <tr>
+                                <td><strong>MySQL</strong></td>
+                                <td>5.6+</td>
+                                <td>8.0+</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Memory Limit</strong></td>
+                                <td>128 MB</td>
+                                <td>256 MB+</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Max Execution Time</strong></td>
+                                <td>60 seconds</td>
+                                <td>120 seconds+</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>Required PHP Extensions</h3>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> <strong>cURL</strong> - For API communications</li>
+                        <li><i class="fas fa-check"></i> <strong>OpenSSL</strong> - For secure JWT token generation</li>
+                        <li><i class="fas fa-check"></i> <strong>JSON</strong> - For data processing</li>
+                        <li><i class="fas fa-check"></i> <strong>mbstring</strong> - For multilingual support</li>
+                    </ul>
+
+                    <h3>External Services Required</h3>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <h4>AI API Key (Choose One)</h4>
+                            <ul>
+                                <li>OpenAI API Key</li>
+                                <li>Claude API Key</li>
+                                <li>Grok API Key</li>
+                                <li>DeepSeek API Key</li>
+                                <li>Gemini API Key</li>
+                            </ul>
+                        </div>
+                        <div class="service-card">
+                            <h4>Google Cloud Service Account</h4>
+                            <ul>
+                                <li>Service Account JSON file</li>
+                                <li>Google Sheets API enabled</li>
+                                <li>Shared access to your spreadsheet</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="info-box warning">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <div>
+                            <strong>Important Note</strong>
+                            <p>AI API usage costs are SEPARATE from the plugin price. You will be charged by the AI provider based on your usage. Please check their pricing pages before starting.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Installation Section -->
+            <section id="installation" class="doc-section">
+                <h2><i class="fas fa-download"></i> Installation</h2>
+                <div class="content-block">
+                    <h3>Method 1: WordPress Admin Upload (Recommended)</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Download Plugin</h4>
+                                <p>Download the <code>auto-post-sheet-to-wp.zip</code> file from your purchase confirmation email.</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Access WordPress Admin</h4>
+                                <p>Log in to your WordPress admin panel and navigate to <strong>Plugins → Add New</strong></p>
+                                <div class="screenshot">
+                                    <img src="images/screenshot-1.png" alt="Add New Plugin">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Upload Plugin</h4>
+                                <p>Click the <strong>"Upload Plugin"</strong> button at the top of the page.</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Choose File</h4>
+                                <p>Click <strong>"Choose File"</strong> and select the <code>auto-post-sheet-to-wp.zip</code> file.</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>Install & Activate</h4>
+                                <p>Click <strong>"Install Now"</strong> and then <strong>"Activate Plugin"</strong> after installation completes.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Method 2: FTP Upload</h3>
+                    <div class="code-block">
+                        <pre><code># 1. Extract the ZIP file
+unzip auto-post-sheet-to-wp.zip
+
+# 2. Upload via FTP to:
+/wp-content/plugins/auto-post-sheet-to-wp/
+
+# 3. Set correct permissions
+chmod 755 auto-post-sheet-to-wp
+chmod 644 auto-post-sheet-to-wp/*.php
+
+# 4. Activate via WordPress admin</code></pre>
+                    </div>
+
+                    <div class="info-box success">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Installation Complete!</strong>
+                            <p>After activation, you'll see a new menu item <strong>"Auto Post Sheet"</strong> in your WordPress admin sidebar.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Configuration Section -->
+            <section id="configuration" class="doc-section">
+                <h2><i class="fas fa-cog"></i> Configuration</h2>
+                <div class="content-block">
+                    <p class="lead">Follow these steps to configure the plugin for first-time use.</p>
+
+                    <!-- AI Provider Setup -->
+                    <div id="config-ai" class="sub-section">
+                        <h3><i class="fas fa-robot"></i> Step 1: AI Provider Setup</h3>
+                        
+                        <h4>1.1 Choose Your AI Provider</h4>
+                        <p>Navigate to <strong>Auto Post Sheet → Settings</strong> and select your preferred AI provider:</p>
+                        
+                        <div class="provider-cards">
+                            <div class="provider-card">
+                                <h5><i class="fas fa-brain"></i> OpenAI</h5>
+                                <p><strong>Models:</strong> GPT-4o, GPT-4o Mini, GPT-4 Turbo, GPT-3.5 Turbo</p>
+                                <p><strong>Best for:</strong> High-quality English content</p>
+                                <p><strong>Get API Key:</strong> <a href="https://platform.openai.com/api-keys" target="_blank">OpenAI Platform</a></p>
+                            </div>
+
+                            <div class="provider-card">
+                                <h5><i class="fas fa-brain"></i> Claude</h5>
+                                <p><strong>Models:</strong> Claude 3.5 Sonnet, Claude 3 Opus, Sonnet, Haiku</p>
+                                <p><strong>Best for:</strong> Long-form content, creative writing</p>
+                                <p><strong>Get API Key:</strong> <a href="https://console.anthropic.com" target="_blank">Anthropic Console</a></p>
+                            </div>
+
+                            <div class="provider-card">
+                                <h5><i class="fas fa-brain"></i> Grok</h5>
+                                <p><strong>Models:</strong> Grok Beta, Grok 2 Latest</p>
+                                <p><strong>Best for:</strong> Latest information, real-time data</p>
+                                <p><strong>Get API Key:</strong> <a href="https://console.x.ai" target="_blank">X.AI Console</a></p>
+                            </div>
+
+                            <div class="provider-card">
+                                <h5><i class="fas fa-brain"></i> DeepSeek</h5>
+                                <p><strong>Models:</strong> DeepSeek Chat, DeepSeek Coder</p>
+                                <p><strong>Best for:</strong> Technical content, code examples</p>
+                                <p><strong>Get API Key:</strong> <a href="https://platform.deepseek.com" target="_blank">DeepSeek Platform</a></p>
+                            </div>
+
+                            <div class="provider-card">
+                                <h5><i class="fas fa-brain"></i> Gemini</h5>
+                                <p><strong>Models:</strong> Gemini 2.0 Flash, 1.5 Pro, Flash, Flash-8B</p>
+                                <p><strong>Best for:</strong> Multilingual content, fast generation</p>
+                                <p><strong>Get API Key:</strong> <a href="https://aistudio.google.com/app/apikey" target="_blank">Google AI Studio</a></p>
+                            </div>
+                        </div>
+
+                        <h4>1.2 Enter API Key</h4>
+                        <div class="steps">
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <p>Copy your API key from the provider's website</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <p>Paste it into the corresponding field in plugin settings</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <p>Select your preferred model from the dropdown</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <p>Click <strong>"Test AI Connection"</strong> to verify</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="screenshot">
+                            <img src="images/screenshot-2.png" alt="AI Provider Configuration">
+                            <p class="caption">AI Provider Configuration Screen</p>
+                        </div>
+
+                        <div class="info-box warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <div>
+                                <strong>API Key Security</strong>
+                                <p>Never share your API keys publicly. They are stored securely in your WordPress database and encrypted during transmission.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Google Sheets Setup -->
+                    <div id="config-sheets" class="sub-section">
+                        <h3><i class="fas fa-table"></i> Step 2: Google Sheets Setup</h3>
+                        
+                        <h4>2.1 Create Google Cloud Service Account</h4>
+                        <div class="steps">
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h5>Go to Google Cloud Console</h5>
+                                    <p>Visit <a href="https://console.cloud.google.com" target="_blank">console.cloud.google.com</a></p>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h5>Create New Project</h5>
+                                    <p>Click "Select a project" → "New Project" → Name it (e.g., "WordPress Automation")</p>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h5>Enable Google Sheets API</h5>
+                                    <p>Go to "APIs & Services" → "Library" → Search "Google Sheets API" → Click "Enable"</p>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h5>Create Service Account</h5>
+                                    <p>Go to "IAM & Admin" → "Service Accounts" → "Create Service Account"</p>
+                                    <ul>
+                                        <li>Name: "WordPress Sheet Sync"</li>
+                                        <li>Role: "Editor" or "Viewer" (depending on your needs)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">5</div>
+                                <div class="step-content">
+                                    <h5>Create JSON Key</h5>
+                                    <p>Click on the service account → "Keys" tab → "Add Key" → "Create new key" → Choose "JSON"</p>
+                                    <p>A <code>service-account-key.json</code> file will be downloaded to your computer.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>2.2 Upload Credentials to WordPress</h4>
+                        <div class="steps">
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <p>In plugin settings, find the "Service Account JSON File" section</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <p>Click "Choose File" and select your <code>service-account-key.json</code></p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <p>Click "Upload JSON File"</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <p>You'll see a success message with your service account email</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>2.3 Prepare Your Google Sheet</h4>
+                        <p>Create a new Google Sheet with the following columns:</p>
+                        
+                        <table class="specs-table">
+                            <thead>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Required?</th>
+                                    <th>Description</th>
+                                    <th>Example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>keyword</strong></td>
+                                    <td><span class="badge required">Required</span></td>
+                                    <td>Main topic/keyword for the article</td>
+                                    <td>Best AI tools 2025</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>category</strong></td>
+                                    <td><span class="badge optional">Optional</span></td>
+                                    <td>WordPress category name</td>
+                                    <td>Technology</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>data_source</strong></td>
+                                    <td><span class="badge optional">Optional</span></td>
+                                    <td>Reference data for AI to use</td>
+                                    <td>Focus on business applications</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>post_type</strong></td>
+                                    <td><span class="badge optional">Optional</span></td>
+                                    <td>Article type (news, tutorial, review, etc)</td>
+                                    <td>review</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>images</strong></td>
+                                    <td><span class="badge optional">Optional</span></td>
+                                    <td>Image URL to insert in article</td>
+                                    <td>https://example.com/image.jpg</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>content</strong></td>
+                                    <td><span class="badge auto">Auto-filled</span></td>
+                                    <td>Generated content (filled by plugin)</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>link_post</strong></td>
+                                    <td><span class="badge auto">Auto-filled</span></td>
+                                    <td>Published post URL (filled by plugin)</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="code-block">
+                            <pre><code>Example Google Sheet Structure:
+┌──────────────────────┬────────────┬─────────────┬───────────┬────────────┬─────────┬───────────┐
+│ keyword              │ category   │ data_source │ post_type │ images     │ content │ link_post │
+├──────────────────────┼────────────┼─────────────┼───────────┼────────────┼─────────┼───────────┤
+│ Best AI tools 2025   │ Technology │             │ review    │ image1.jpg │         │           │
+│ WordPress SEO tips   │ SEO        │             │ tutorial  │ image2.jpg │         │           │
+│ Python for beginners │ Programming│             │ tutorial  │            │         │           │
+└──────────────────────┴────────────┴─────────────┴───────────┴────────────┴─────────┴───────────┘</code></pre>
+                        </div>
+
+                        <h4>2.4 Share Sheet with Service Account</h4>
+                        <div class="info-box warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <div>
+                                <strong>Critical Step!</strong>
+                                <p>You MUST share your Google Sheet with the service account email, otherwise the plugin cannot access it.</p>
+                            </div>
+                        </div>
+
+                        <div class="steps">
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <p>Copy the service account email from plugin settings (looks like: <code>your-service@project-id.iam.gserviceaccount.com</code>)</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <p>Open your Google Sheet and click the <strong>"Share"</strong> button</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <p>Paste the service account email and give it <strong>"Editor"</strong> permission</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <p>Click <strong>"Done"</strong></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>2.5 Enter Sheet ID</h4>
+                        <p>Get your Google Sheet ID from the URL:</p>
+                        <div class="code-block">
+                            <pre><code>URL: https://docs.google.com/spreadsheets/d/<strong>1N9MKgoCLamcO1rR7okgTvHN12iF_MiClWVE5_HGjKgc</strong>/edit
+                                    │
+                                    └─ This is your Sheet ID</code></pre>
+                        </div>
+                        <p>Paste it into the "Google Sheet ID" field in plugin settings.</p>
+
+                        <div class="screenshot">
+                            <img src="images/screenshot-3.png" alt="Google Sheets Configuration">
+                            <p class="caption">Google Sheets Configuration Screen</p>
+                        </div>
+                    </div>
+
+                    <!-- Post Settings -->
+                    <div id="config-post" class="sub-section">
+                        <h3><i class="fas fa-edit"></i> Step 3: Post Settings</h3>
+                        
+                        <h4>Content Language</h4>
+                        <p>Choose the language for AI-generated content. Supported languages:</p>
+                        <div class="language-grid">
+                            <div class="lang-item">🇻🇳 Vietnamese</div>
+                            <div class="lang-item">🇬🇧 English</div>
+                            <div class="lang-item">🇨🇳 Chinese</div>
+                            <div class="lang-item">🇫🇷 French</div>
+                            <div class="lang-item">🇩🇪 German</div>
+                            <div class="lang-item">🇪🇸 Spanish</div>
+                            <div class="lang-item">🇵🇹 Portuguese</div>
+                            <div class="lang-item">🇰🇷 Korean</div>
+                            <div class="lang-item">🇯🇵 Japanese</div>
+                            <div class="lang-item">🇹🇭 Thai</div>
+                            <div class="lang-item">🇮🇩 Indonesian</div>
+                            <div class="lang-item">🇮🇳 Hindi</div>
+                            <div class="lang-item">🇸🇦 Arabic</div>
+                            <div class="lang-item">🇹🇷 Turkish</div>
+                            <div class="lang-item">🇵🇱 Polish</div>
+                        </div>
+
+                        <h4>Default Category</h4>
+                        <p>Select which WordPress category all posts should be assigned to by default. You can override this per post in Google Sheet.</p>
+
+                        <h4>Post Status</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> <strong>Publish</strong> - Posts go live immediately</li>
+                            <li><i class="fas fa-check"></i> <strong>Draft</strong> - Save as drafts for review</li>
+                            <li><i class="fas fa-check"></i> <strong>Pending Review</strong> - Queue for editorial approval</li>
+                        </ul>
+
+                        <h4>Maximum Posts Per Run</h4>
+                        <p>Control how many posts to generate in one batch (1-1000). Recommended: 10-50 for optimal performance.</p>
+
+                        <h4>Delay Between Posts</h4>
+                        <p>Set a delay in seconds between each post creation (0-60). This prevents API rate limiting and server overload.</p>
+
+                        <h4>Content Length</h4>
+                        <p>Use the slider to set AI content length between 500-2000 words. Longer content = higher quality but higher API costs.</p>
+
+                        <div class="screenshot">
+                            <img src="images/screenshot-4.png" alt="Post Settings">
+                            <p class="caption">Post Settings Configuration</p>
+                        </div>
+
+                        <h4>Save Settings</h4>
+                        <p>After configuring everything, click <strong>"Save Settings"</strong> at the bottom. You'll see a success message.</p>
+
+                        <div class="info-box success">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Configuration Complete!</strong>
+                                <p>You're now ready to generate and publish content. Proceed to the Usage Guide section.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Usage Guide Section -->
+            <section id="usage" class="doc-section">
+    <h2><i class="fas fa-play-circle"></i> Usage Guide</h2>
+    
+    <div class="video-guide-box">
+        <a href="https://drive.google.com/file/d/1YyPjIUvLXzbfOma8xfCabggxuGEIthy6/view?t=4" 
+           target="_blank" 
+           class="video-guide-btn">
+            <i class="fas fa-video"></i>
+            Watch Video Tutorial
+        </a>
+    </div>
+    
+    <div class="content-block">
+        <p class="lead">Follow this step-by-step guide to start generating content.</p>
+
+                    <!-- Prepare Sheet -->
+                    <div id="usage-sheet" class="sub-section">
+                        <h3>Step 1: Prepare Your Google Sheet</h3>
+                        <p>Add keywords to your Google Sheet following the structure explained in Configuration.</p>
+                        
+                        <div class="code-block">
+                            <pre><code>Example rows:
+keyword                    | category    | data_source           | post_type | images
+────────────────────────────────────────────────────────────────────────────────────────
+Best WordPress plugins 2025| Plugins     |                       | review    | image1.jpg
+How to optimize WordPress  | Performance | Focus on speed        | tutorial  | 
+SEO tips for bloggers      | SEO         | Include tool examples | tutorial  | image2.jpg</code></pre>
+                        </div>
+
+                        <div class="info-box info">
+                            <i class="fas fa-info-circle"></i>
+                            <div>
+                                <strong>Pro Tip</strong>
+                                <p>Use the <strong>data_source</strong> column to give AI specific instructions or reference data. This improves content quality and relevance.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Test Connection -->
+                    <div id="usage-test" class="sub-section">
+                        <h3>Step 2: Test Connections</h3>
+                        <p>Before generating content, verify everything is working:</p>
+                        
+                        <div class="steps">
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Test AI Connection</h4>
+                                    <p>Go to <strong>Auto Post Sheet → Settings</strong> and click <strong>"Test AI Connection"</strong></p>
+                                    <p>✅ You should see: "Connection successful"</p>
+                                    <p>❌ If failed: Check your API key and internet connection</p>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Test Google Sheets Connection</h4>
+                                    <p>Click <strong>"Test Google Sheets Connection"</strong></p>
+                                    <p>✅ You should see: "Sheet access successful"</p>
+                                    <p>❌ If failed: Check service account permissions and Sheet ID</p>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Verify System Status</h4>
+                                    <p>Go to <strong>Status</strong> tab to see overall health check</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="screenshot">
+                            <img src="images/screenshot-5.png" alt="System Status">
+                            <p class="caption">System Status Dashboard</p>
+                        </div>
+                    </div>
+
+                    <!-- Generate Content -->
+                    <div id="usage-generate" class="sub-section">
+                        <h3>Step 3: Generate Content</h3>
+                        
+                        <h4>Preview Your Sheet Data</h4>
+                        <div class="steps">
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <p>Navigate to <strong>Auto Post Sheet → Posting</strong></p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <p>Click <strong>"Read Google Sheet"</strong></p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <p>You'll see a preview table with all keywords and settings</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Test with Single Post</h4>
+                        <p>Before running a full batch, test with one post:</p>
+                        <div class="steps">
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <p>Click <strong>"Test Post (1 Article)"</strong></p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <p>Watch the progress indicator</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <p>Review the generated content</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <p>If satisfied, proceed to full batch</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Start Auto Post (Full Batch)</h4>
+                        <p>Ready to generate all posts? Here we go:</p>
+                        
+                        <div class="steps">
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Click "Start Auto Post"</h4>
+                                    <p>The big green button on the Posting page</p>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Monitor Progress</h4>
+                                    <p>You'll see a beautiful animated progress sidebar showing:</p>
+                                    <ul>
+                                        <li>Current keyword being processed</li>
+                                        <li>Progress percentage</li>
+                                        <li>Success/failure count</li>
+                                        <li>Estimated time remaining</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Wait for Completion</h4>
+                                    <p>Don't close the browser window. The process runs in real-time via AJAX.</p>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h4>Review Results</h4>
+                                    <p>After completion, you'll see a summary with links to all created posts.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="screenshot">
+                            <img src="images/screenshot-6.png" alt="Auto Posting Progress">
+                            <p class="caption">Real-time Progress Tracking</p>
+                        </div>
+
+                        <div class="info-box success">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Success!</strong>
+                                <p>Your posts have been created. Check your Google Sheet - the "content" and "link_post" columns are now filled automatically.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>View Posting History</h3>
+                    <p>Navigate to <strong>Auto Post Sheet → History</strong> to view detailed logs of all posting activities:</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Success/failure status for each post</li>
+                        <li><i class="fas fa-check"></i> Error messages if any</li>
+                        <li><i class="fas fa-check"></i> Links to edit posts in WordPress</li>
+                        <li><i class="fas fa-check"></i> Timestamps for audit trail</li>
+                        <li><i class="fas fa-check"></i> Pagination for large datasets</li>
+                    </ul>
+
+                    <div class="screenshot">
+                        <img src="images/screenshot-7.png" alt="Posting History">
+                        <p class="caption">Posting History with Detailed Logs</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- AI Providers Section -->
+            <section id="ai-providers" class="doc-section">
+                <h2><i class="fas fa-brain"></i> AI Providers Comparison</h2>
+                <div class="content-block">
+                    <p class="lead">Choose the AI provider that best fits your needs and budget.</p>
+                    
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Provider</th>
+                                <th>Best For</th>
+                                <th>Quality</th>
+                                <th>Speed</th>
+                                <th>Cost</th>
+                                <th>Languages</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>OpenAI GPT-4o</strong></td>
+                                <td>High-quality content, creative writing</td>
+                                <td>⭐⭐⭐⭐⭐</td>
+                                <td>⚡⚡⚡⚡</td>
+                                <td>💰💰💰</td>
+                                <td>Excellent</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Claude 3.5 Sonnet</strong></td>
+                                <td>Long-form, research, analysis</td>
+                                <td>⭐⭐⭐⭐⭐</td>
+                                <td>⚡⚡⚡⚡</td>
+                                <td>💰💰💰</td>
+                                <td>Excellent</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Grok 2</strong></td>
+                                <td>Latest news, real-time info</td>
+                                <td>⭐⭐⭐⭐</td>
+                                <td>⚡⚡⚡⚡⚡</td>
+                                <td>💰💰</td>
+                                <td>Good</td>
+                            </tr>
+                            <tr>
+                                <td><strong>DeepSeek Chat</strong></td>
+                                <td>Technical content, code examples</td>
+                                <td>⭐⭐⭐⭐</td>
+                                <td>⚡⚡⚡⚡</td>
+                                <td>💰</td>
+                                <td>Good</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Gemini 2.0 Flash</strong></td>
+                                <td>Multilingual, fast generation</td>
+                                <td>⭐⭐⭐⭐</td>
+                                <td>⚡⚡⚡⚡⚡</td>
+                                <td>💰💰</td>
+                                <td>Excellent</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>Pricing Information</h3>
+                    <div class="info-box warning">
+                        <i class="fas fa-dollar-sign"></i>
+                        <div>
+                            <strong>Important: API Costs</strong>
+                            <p>AI API usage is charged separately by the providers. Prices vary based on model and usage. Please check each provider's pricing page:</p>
+                            <ul>
+                                <li>OpenAI: <a href="https://openai.com/pricing" target="_blank">https://openai.com/pricing</a></li>
+                                <li>Claude: <a href="https://anthropic.com/pricing" target="_blank">https://anthropic.com/pricing</a></li>
+                                <li>Grok: <a href="https://x.ai/pricing" target="_blank">https://x.ai/pricing</a></li>
+                                <li>DeepSeek: <a href="https://platform.deepseek.com/pricing" target="_blank">https://platform.deepseek.com/pricing</a></li>
+                                <li>Gemini: <a href="https://ai.google.dev/pricing" target="_blank">https://ai.google.dev/pricing</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>Cost Estimation Examples</h3>
+                    <p>Approximate costs for generating 100 articles (900 words each):</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-dollar-sign"></i> <strong>GPT-4o:</strong> ~$15-25</li>
+                        <li><i class="fas fa-dollar-sign"></i> <strong>Claude 3.5 Sonnet:</strong> ~$20-30</li>
+                        <li><i class="fas fa-dollar-sign"></i> <strong>Grok 2:</strong> ~$10-15</li>
+                        <li><i class="fas fa-dollar-sign"></i> <strong>DeepSeek:</strong> ~$5-10</li>
+                        <li><i class="fas fa-dollar-sign"></i> <strong>Gemini Flash:</strong> ~$8-12</li>
+                    </ul>
+                    <p><em>*Prices are estimates and subject to change. Always check provider pricing pages.</em></p>
+                </div>
+            </section>
+
+            <!-- Languages Section -->
+            <section id="languages" class="doc-section">
+                <h2><i class="fas fa-language"></i> Supported Languages</h2>
+                <div class="content-block">
+                    <p class="lead">Generate native-quality content in 15+ languages.</p>
+                    
+                    <div class="language-showcase">
+                        <div class="lang-card">
+                            <h3>🌏 Asia Pacific</h3>
+                            <ul>
+                                <li>🇻🇳 Vietnamese (Tiếng Việt)</li>
+                                <li>🇨🇳 Chinese (中文)</li>
+                                <li>🇰🇷 Korean (한국어)</li>
+                                <li>🇯🇵 Japanese (日本語)</li>
+                                <li>🇮🇳 Hindi (हिन्दी)</li>
+                                <li>🇮🇩 Indonesian (Bahasa Indonesia)</li>
+                                <li>🇹🇭 Thai (ภาษาไทย)</li>
+                            </ul>
+                        </div>
+
+                        <div class="lang-card">
+                            <h3>🌍 Europe</h3>
+                            <ul>
+                                <li>🇬🇧 English</li>
+                                <li>🇫🇷 French (Français)</li>
+                                <li>🇩🇪 German (Deutsch)</li>
+                                <li>🇪🇸 Spanish (Español)</li>
+                                <li>🇵🇹 Portuguese (Português)</li>
+                                <li>🇮🇹 Italian (Italiano)</li>
+                                <li>🇳🇱 Dutch (Nederlands)</li>
+                                <li>🇵🇱 Polish (Polski)</li>
+                            </ul>
+                        </div>
+
+                        <div class="lang-card">
+                            <h3>🌐 Middle East & Others</h3>
+                            <ul>
+                                <li>🇹🇷 Turkish (Türkçe)</li>
+                                <li>🇸🇦 Arabic (العربية)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>Content Quality by Language</h3>
+                    <p>AI models perform differently across languages:</p>
+                    
+                    <table class="specs-table">
+                        <thead>
+                            <tr>
+                                <th>Language</th>
+                                <th>GPT-4</th>
+                                <th>Claude</th>
+                                <th>Gemini</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>English</td>
+                                <td>⭐⭐⭐⭐⭐</td>
+                                <td>⭐⭐⭐⭐⭐</td>
+                                <td>⭐⭐⭐⭐⭐</td>
+                                <td>Highest quality, all models excellent</td>
+                            </tr>
+                            <tr>
+                                <td>Chinese</td>
+                                <td>⭐⭐⭐⭐⭐</td>
+                                <td>⭐⭐⭐⭐</td>
+                                <td>⭐⭐⭐⭐⭐</td>
+                                <td>Gemini particularly strong</td>
+                            </tr>
+                            <tr>
+                                <td>Spanish, French</td>
+                                <td>⭐⭐⭐⭐⭐</td>
+                                <td>⭐⭐⭐⭐⭐</td>
+                                <td>⭐⭐⭐⭐</td>
+                                <td>All models perform well</td>
+                            </tr>
+                            <tr>
+                                <td>Vietnamese</td>
+                                <td>⭐⭐⭐⭐</td>
+                                <td>⭐⭐⭐⭐</td>
+                                <td>⭐⭐⭐⭐⭐</td>
+                                <td>Gemini recommended for Vietnamese</td>
+                            </tr>
+                            <tr>
+                                <td>Other Languages</td>
+                                <td>⭐⭐⭐⭐</td>
+                                <td>⭐⭐⭐⭐</td>
+                                <td>⭐⭐⭐⭐</td>
+                                <td>Good quality, may need review</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="info-box info">
+                        <i class="fas fa-lightbulb"></i>
+                        <div>
+                            <strong>Language Mixing</strong>
+                            <p>You can use the same plugin installation to generate content in multiple languages. Just change the language setting before each batch, or create multiple Google Sheets for different languages.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Troubleshooting Section -->
+            <section id="troubleshooting" class="doc-section">
+                <h2><i class="fas fa-wrench"></i> Troubleshooting</h2>
+                <div class="content-block">
+                    <h3>Common Issues & Solutions</h3>
+                    
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <i class="fas fa-times-circle"></i>
+                                <span>"AI Connection Failed"</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="accordion-content">
+                                <h4>Possible Causes:</h4>
+                                <ul>
+                                    <li>Invalid API key</li>
+                                    <li>Insufficient API credits</li>
+                                    <li>Rate limiting by provider</li>
+                                    <li>Firewall blocking requests</li>
+                                </ul>
+                                <h4>Solutions:</h4>
+                                <ol>
+                                    <li>Double-check your API key is correct and active</li>
+                                    <li>Verify your API account has sufficient credits/balance</li>
+                                    <li>Check if your server's firewall allows outgoing HTTPS connections</li>
+                                    <li>Try a different AI provider to isolate the issue</li>
+                                    <li>Check server error logs: <code>/wp-content/debug.log</code></li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <i class="fas fa-times-circle"></i>
+                                <span>"Google Sheets Access Denied"</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="accordion-content">
+                                <h4>Possible Causes:</h4>
+                                <ul>
+                                    <li>Service account not shared with sheet</li>
+                                    <li>Wrong Sheet ID</li>
+                                    <li>Invalid credentials file</li>
+                                    <li>Google Sheets API not enabled</li>
+                                </ul>
+                                <h4>Solutions:</h4>
+                                <ol>
+                                    <li>Verify you've shared the sheet with service account email</li>
+                                    <li>Double-check Sheet ID copied correctly from URL</li>
+                                    <li>Re-upload credentials JSON file</li>
+                                    <li>Enable Google Sheets API in Google Cloud Console</li>
+                                    <li>Make sure service account has "Editor" permission</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <i class="fas fa-times-circle"></i>
+                                <span>"Content Generation Timeout"</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="accordion-content">
+                                <h4>Possible Causes:</h4>
+                                <ul>
+                                    <li>PHP max_execution_time too low</li>
+                                    <li>AI provider slow response</li>
+                                    <li>Content length set too high</li>
+                                </ul>
+                                <h4>Solutions:</h4>
+                                <ol>
+                                    <li>Increase PHP <code>max_execution_time</code> to 120+ seconds</li>
+                                    <li>Reduce content length slider to 500-900 words</li>
+                                    <li>Add delay between posts (5-10 seconds)</li>
+                                    <li>Generate in smaller batches (10-20 posts at a time)</li>
+                                </ol>
+                                <div class="code-block">
+                                    <pre><code>; Add to php.ini or .htaccess:
+max_execution_time = 120
+max_input_time = 120</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <i class="fas fa-times-circle"></i>
+                                <span>"Posts Not Creating"</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="accordion-content">
+                                <h4>Possible Causes:</h4>
+                                <ul>
+                                    <li>Category doesn't exist</li>
+                                    <li>Permission issues</li>
+                                    <li>Database errors</li>
+                                </ul>
+                                <h4>Solutions:</h4>
+                                <ol>
+                                    <li>Check if default category exists in WordPress</li>
+                                    <li>Verify current user has permission to create posts</li>
+                                    <li>Check WordPress debug log for errors</li>
+                                    <li>Try creating a post manually to verify WordPress is working</li>
+                                    <li>Ensure database isn't full or corrupted</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <i class="fas fa-times-circle"></i>
+                                <span>"Image Not Inserting"</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="accordion-content">
+                                <h4>Possible Causes:</h4>
+                                <ul>
+                                    <li>Invalid image URL</li>
+                                    <li>No H2 tags in content</li>
+                                    <li>Image URL not accessible</li>
+                                </ul>
+                                <h4>Solutions:</h4>
+                                <ol>
+                                    <li>Verify image URL is publicly accessible</li>
+                                    <li>Check if AI generated content has H2 tags</li>
+                                    <li>Make sure image URL starts with https://</li>
+                                    <li>Test image URL in browser first</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <i class="fas fa-times-circle"></i>
+                                <span>"Progress Stuck / Not Moving"</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="accordion-content">
+                                <h4>Possible Causes:</h4>
+                                <ul>
+                                    <li>JavaScript error</li>
+                                    <li>AJAX timeout</li>
+                                    <li>Server unresponsive</li>
+                                </ul>
+                                <h4>Solutions:</h4>
+                                <ol>
+                                    <li>Check browser console for JavaScript errors (F12)</li>
+                                    <li>Refresh page and try again</li>
+                                    <li>Clear browser cache</li>
+                                    <li>Try different browser</li>
+                                    <li>Check if server is under heavy load</li>
+                                    <li>Reduce batch size and try again</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Enable WordPress Debug Mode</h3>
+                    <p>To see detailed error messages, enable WordPress debug mode:</p>
+                    <div class="code-block">
+                        <pre><code>// Add to wp-config.php:
+define( 'WP_DEBUG', true );
+define( 'WP_DEBUG_LOG', true );
+define( 'WP_DEBUG_DISPLAY', false );
+
+// Check logs at:
+/wp-content/debug.log</code></pre>
+                    </div>
+
+                    <div class="info-box warning">
+                        <i class="fas fa-bug"></i>
+                        <div>
+                            <strong>Still Having Issues?</strong>
+                            <p>If you can't resolve the problem, contact support with:</p>
+                            <ul>
+                                <li>Error message screenshots</li>
+                                <li>WordPress debug.log contents</li>
+                                <li>Browser console errors (F12)</li>
+                                <li>PHP version and server info</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section id="faq" class="doc-section">
+                <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+                <div class="content-block">
+                    <div class="faq-grid">
+                        <div class="faq-item">
+                            <h3>💰 Do I need to pay for AI API separately?</h3>
+                            <p><strong>Yes.</strong> The plugin price is a one-time purchase, but AI API usage (OpenAI, Claude, etc.) is charged separately by the providers based on your usage.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>🌍 Can I generate content in multiple languages?</h3>
+                            <p><strong>Yes!</strong> The plugin supports 15+ languages. You can switch between languages in settings or create separate sheets for different languages.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>📝 How many posts can I generate?</h3>
+                            <p><strong>Unlimited.</strong> There's no limit in the plugin itself. However, AI providers may have rate limits or usage quotas based on your subscription plan.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>✏️ Can I edit content before publishing?</h3>
+                            <p><strong>Yes.</strong> Set post status to "Draft" in settings, then review and edit each post in WordPress before publishing.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>🔄 Can I regenerate content for existing keywords?</h3>
+                            <p><strong>Yes.</strong> Simply clear the "content" and "link_post" columns in Google Sheet and run the automation again.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>🤖 Which AI provider is best?</h3>
+                            <p><strong>Depends on your needs:</strong> GPT-4 for quality, Claude for long-form, Gemini for multilingual, DeepSeek for budget. See AI Providers section for detailed comparison.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>📊 Does it work with custom post types?</h3>
+                            <p><strong>Currently no.</strong> The plugin supports standard WordPress posts only. Custom post type support may be added in future updates.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>🖼️ Can I use my own images?</h3>
+                            <p><strong>Yes.</strong> Add image URLs in the "images" column of your Google Sheet. Images will be inserted automatically after the first H2 heading.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>⚡ How fast is content generation?</h3>
+                            <p><strong>Varies by provider.</strong> Typically 10-30 seconds per article (900 words). Gemini Flash is fastest, Claude is more thorough but slower.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>🔒 Is my API key secure?</h3>
+                            <p><strong>Yes.</strong> API keys are stored encrypted in your WordPress database and never transmitted in plain text except to the AI provider's official API.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>📱 Does it work on mobile?</h3>
+                            <p><strong>Yes.</strong> The admin interface is fully responsive. However, for best experience managing large batches, we recommend using a desktop browser.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>🔄 Can I schedule posts for later?</h3>
+                            <p><strong>Not built-in.</strong> However, you can set post status to "Draft" and use WordPress's native post scheduling feature to publish them later.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>👥 Does it support multiple users?</h3>
+                            <p><strong>Yes.</strong> Any WordPress admin can use the plugin. However, API keys are global (not per-user).</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>🌐 Can I use multiple Google Sheets?</h3>
+                            <p><strong>One at a time.</strong> You can switch between different Sheet IDs, but only one can be active at a time. Change the Sheet ID in settings before each batch.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>💾 Is there a backup feature?</h3>
+                            <p><strong>No built-in backup.</strong> However, all content is in Google Sheet (your source of truth) and WordPress database (standard WP backup applies).</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>🔧 Can I customize the AI prompts?</h3>
+                            <p><strong>Not via UI.</strong> The prompts are optimized for best results. Advanced users can modify prompts in the plugin code, but this requires PHP knowledge.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box info">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Have More Questions?</strong>
+                            <p>Contact support at <strong>voquy7177@gmail.com</strong> or visit our support forum. Response time: Within 24 hours on business days.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Support Section -->
+            <section id="support" class="doc-section">
+                <h2><i class="fas fa-life-ring"></i> Support</h2>
+                <div class="content-block">
+                    <h3>Get Help</h3>
+                    <p>We're here to help! Choose your preferred support channel:</p>
+
+                    <div class="support-cards">
+                        <div class="support-card">
+                            <div class="support-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h4>Email Support</h4>
+                            <p>Send detailed questions with screenshots to:</p>
+                            <p><strong>voquy7177@gmail.com</strong></p>
+                            <p class="support-time">Response time: Within 24 hours</p>
+                        </div>
+
+                        <div class="support-card">
+                            <div class="support-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <h4>Documentation</h4>
+                            <p>Complete guides and tutorials:</p>
+                            <p><strong>yoursite.com/docs</strong></p>
+                            <p class="support-time">Updated regularly</p>
+                        </div>
+
+                        <div class="support-card">
+                            <div class="support-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <h4>Video Tutorials</h4>
+                            <p>Step-by-step video guides:</p>
+                            <p><strong>youtube.com/yourchannel</strong></p>
+                            <p class="support-time">New videos added weekly</p>
+                        </div>
+
+                        <div class="support-card">
+                            <div class="support-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h4>Support Forum</h4>
+                            <p>Community Q&A and discussions:</p>
+                            <p><strong>yoursite.com/forum</strong></p>
+                            <p class="support-time">Active community</p>
+                        </div>
+                    </div>
+
+                    <h3>Before Contacting Support</h3>
+                    <p>To help us assist you faster, please:</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Check the Troubleshooting section above</li>
+                        <li><i class="fas fa-check"></i> Review FAQs for common questions</li>
+                        <li><i class="fas fa-check"></i> Enable debug mode and check error logs</li>
+                        <li><i class="fas fa-check"></i> Test with a fresh WordPress installation if possible</li>
+                    </ul>
+
+                    <h3>When Requesting Support, Include:</h3>
+                    <div class="code-block">
+                        <pre><code>1. WordPress version: (e.g., 6.4.2)
+2. PHP version: (e.g., 8.1)
+3. Plugin version: (e.g., 2.0.0)
+4. AI provider: (e.g., OpenAI GPT-4)
+5. Error message: (screenshot or copy/paste)
+6. Steps to reproduce: (detailed steps)
+7. Browser console errors: (F12 → Console tab)
+8. Debug log: (/wp-content/debug.log)</code></pre>
+                    </div>
+
+                    <h3>Premium Support</h3>
+                    <p>Need faster response or custom development?</p>
+                    <div class="premium-support">
+                        <h4>Priority Email Support</h4>
+                        <ul>
+                            <li>4-hour response time</li>
+                            <li>Direct developer access</li>
+                        </ul>
+                        
+                        <h4>Custom Development</h4>
+                        <ul>
+                            <li>Feature customization</li>
+                            <li>Integration with other plugins</li>
+                            <li>Contact for quote</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-box success">
+                        <i class="fas fa-star"></i>
+                        <div>
+                            <strong>Leave a Review!</strong>
+                            <p>If you love the plugin, please leave a 5-star review on CodeCanyon. It helps us continue improving and supporting the plugin.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Changelog Section -->
+            <section id="changelog" class="doc-section">
+                <h2><i class="fas fa-history"></i> Changelog</h2>
+                <div class="content-block">
+                    <div class="changelog-entry">
+                        <div class="version-header">
+                            <h3>Version 2.0.0</h3>
+                            <span class="release-date">2025-01-XX</span>
+                        </div>
+                        
+                        <h4><i class="fas fa-plus-circle"></i> New Features</h4>
+                        <ul>
+                            <li>Added Gemini AI support (5 models)</li>
+                            <li>Added 15+ language support</li>
+                            <li>Added real-time progress sidebar with animations</li>
+                            <li>Added content length control slider (500-2000 words)</li>
+                            <li>Added rate limiting protection</li>
+                            <li>Added comprehensive history logging</li>
+                        </ul>
+
+                        <h4><i class="fas fa-arrow-up"></i> Improvements</h4>
+                        <ul>
+                            <li>Enhanced error handling with detailed messages</li>
+                            <li>Improved security (XSS, SQL injection prevention)</li>
+                            <li>Better translation support (i18n/l10n)</li>
+                            <li>Optimized code quality (WordPress Coding Standards)</li>
+                            <li>Enhanced accessibility (WCAG compliance)</li>
+                            <li>Improved UI/UX with modern design</li>
+                        </ul>
+
+                        <h4><i class="fas fa-bug"></i> Bug Fixes</h4>
+                        <ul>
+                            <li>Fixed category assignment by name</li>
+                            <li>Fixed image insertion position after H2</li>
+                            <li>Fixed pagination in history page</li>
+                            <li>Fixed nonce verification in AJAX calls</li>
+                            <li>Fixed Google Sheets authentication timeout</li>
+                        </ul>
+
+                        <h4><i class="fas fa-shield-alt"></i> Security</h4>
+                        <ul>
+                            <li>Added capability checks on all admin pages</li>
+                            <li>Added input sanitization and output escaping</li>
+                            <li>Added SQL injection prevention</li>
+                            <li>Added CSRF protection</li>
+                            <li>Hardened file upload security</li>
+                        </ul>
+                    </div>
+
+                    <div class="changelog-entry">
+                        <div class="version-header">
+                            <h3>Version 1.0.0</h3>
+                            <span class="release-date">2024-XX-XX</span>
+                        </div>
+                        
+                        <h4><i class="fas fa-rocket"></i> Initial Release</h4>
+                        <ul>
+                            <li>OpenAI GPT-4 support</li>
+                            <li>Claude 3 support</li>
+                            <li>Grok support</li>
+                            <li>DeepSeek support</li>
+                            <li>Google Sheets integration</li>
+                            <li>Basic posting automation</li>
+                            <li>Category management</li>
+                            <li>History logging</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-box info">
+                        <i class="fas fa-bell"></i>
+                        <div>
+                            <strong>Stay Updated</strong>
+                            <p>Subscribe to our newsletter for update notifications and new feature announcements.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="docs-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Auto Post Sheet To WordPress</h3>
+                    <p>Version 2.0.0 | © 2025 DUC QUY | All Rights Reserved</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#support"><i class="fas fa-envelope"></i> Support</a>
+                    <a href="#changelog"><i class="fas fa-history"></i> Updates</a>
+                    <a href="https://codecanyon.net" target="_blank"><i class="fas fa-star"></i> Rate Us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/docs-script.js"></script>
+</body>
+</html>
